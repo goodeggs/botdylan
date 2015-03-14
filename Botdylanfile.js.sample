@@ -1,0 +1,18 @@
+module.exports = {
+  "username": process.env.USERNAME || "botdylan"
+, "password": process.env.PASSWORD || "blood-on-the-tracks"
+, "auth": process.env.AUTH || "basic"
+, "url": process.env.URL || "http://example.com"
+, "port": process.env.PORT || 5000
+, "repositories": {
+    "botdylan/test": {
+      "crons": {
+        "0 0 0 * * *": ["ping"]
+      }
+    , "hooks": {
+        "issue_comment": ["pong"]
+      , "push" : ["cowboys"]
+      }
+    }
+  }
+}
